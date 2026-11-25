@@ -1,14 +1,23 @@
-# Penguin Pet Mod — summonable entity + Penguin Egg
+# Penguin Pet Mod
 
-Fabric / Minecraft Java 1.21.11, Java 21.
+Fabric / Minecraft Java **1.21.11**, Java 21. Works alongside Entity Texture Features / Entity Model Features (optional).
 
 ## Build
-Run `gradle build` or import into IntelliJ IDEA. Output: `build/libs/`.
+- GitHub: push this folder to a repo -> Actions tab -> "Build Penguin Pet Mod" -> download the artifact.
+- Local: install Gradle 9.2+ and run `gradle build`. Jar is in `build/libs/` (use the one WITHOUT `-sources`).
+- Requires Fabric Loader 0.18.1+ and Fabric API for 1.21.11 in your mods folder.
 
 ## Test in-game
 - `/summon penguinpet:penguin`
-- Search Creative inventory for **Penguin Egg** (black/white spawn egg).
-- Or `/give @s penguinpet:penguin_spawn_egg`
+- `/give @s penguinpet:penguin_spawn_egg`
+- Creative inventory -> Spawn Eggs tab -> **Penguin Egg**
 
-## Important
-This update registers the custom `penguinpet:penguin` entity and egg. To keep this focused on the spawn issue, the entity currently uses Minecraft's vanilla pig entity/rendering as a visible placeholder. It is summonable and the egg spawns it, but it is NOT yet the custom penguin model/AI/pet feature set. The egg has black/white tint colors and is added to the Spawn Eggs creative tab.
+## Status
+Entity + egg register and spawn. The penguin still uses the vanilla pig model as a placeholder;
+custom model, taming, inventory, etc. are not implemented yet.
+
+## v0.1.2 boot-crash fixes
+- Item.Settings now has its registry key (1.21.2+ requirement) -> fixes crash on startup.
+- Client entrypoint moved into the compiled source set (it was never packaged before).
+- Default entity attributes registered (fixes crash when spawning).
+- Spawn egg uses `Settings#spawnEgg`; colours moved to the item definition JSON (1.21.4+).
