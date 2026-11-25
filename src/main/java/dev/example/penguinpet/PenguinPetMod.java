@@ -1,7 +1,7 @@
 package dev.example.penguinpet;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEvents;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
@@ -53,7 +53,7 @@ public final class PenguinPetMod implements ModInitializer {
         // Without default attributes the game crashes the moment a penguin is created/spawned.
         FabricDefaultAttributeRegistry.register(PENGUIN, PigEntity.createPigAttributes());
 
-        FabricItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS)
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS)
                 .register(entries -> entries.add(PENGUIN_EGG));
         LOGGER.info("Penguin entity and Penguin Egg registered!");
     }
