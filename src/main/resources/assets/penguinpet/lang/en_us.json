@@ -1,3 +1,4 @@
 {
-  "itemGroup.penguinpet": "Penguin Pet Mod"
+  "entity.penguinpet.penguin": "Penguin",
+  "item.penguinpet.penguin_spawn_egg": "Penguin Egg"
 }

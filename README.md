@@ -1,20 +1,14 @@
-# Penguin Pet Mod (Fabric) — Minecraft 1.21.11
+# Penguin Pet Mod — summonable entity + Penguin Egg
 
-GitHub-ready Fabric mod project. Import this folder into a GitHub repository, then build with Java 21 and Gradle.
+Fabric / Minecraft Java 1.21.11, Java 21.
 
 ## Build
-1. Install Java 21 (JDK).
-2. Open this project in IntelliJ IDEA or use a terminal.
-3. Run `./gradlew build` (Windows: `gradlew.bat build`).
-4. The mod JAR will be in `build/libs/`.
+Run `gradle build` or import into IntelliJ IDEA. Output: `build/libs/`.
 
-## Dependencies
-- Fabric Loader and Fabric API
-- Client: Entity Texture Features (ETF) and Entity Model Features (EMF), both for Minecraft 1.21.11.
-  EMF depends on ETF. They are client-side enhancements; don't require them on a dedicated server.
+## Test in-game
+- `/summon penguinpet:penguin`
+- Search Creative inventory for **Penguin Egg** (black/white spawn egg).
+- Or `/give @s penguinpet:penguin_spawn_egg`
 
-## Current project status
-This repository is a starter implementation, not yet the full feature-complete mod requested. It includes the mod entrypoint, metadata, Gradle setup, and a GitHub Actions build workflow. The complete penguin entity, custom GUI/inventory, combat, AI, models, textures, animations, and sounds still need to be implemented and tested against the exact 1.21.11 Fabric API.
-
-## GitHub
-Create a new repository, extract this ZIP, then commit and push the contents of this folder (not the ZIP itself).
+## Important
+This update registers the custom `penguinpet:penguin` entity and egg. To keep this focused on the spawn issue, the entity currently uses Minecraft's vanilla pig entity/rendering as a visible placeholder. It is summonable and the egg spawns it, but it is NOT yet the custom penguin model/AI/pet feature set. The egg has black/white tint colors and is added to the Spawn Eggs creative tab.

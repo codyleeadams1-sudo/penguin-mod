@@ -8,7 +8,8 @@
   "license": "MIT",
   "environment": "*",
   "entrypoints": {
-    "main": ["dev.example.penguinpet.PenguinPetMod"]
+    "main": ["dev.example.penguinpet.PenguinPetMod"],
+    "client": ["dev.example.penguinpet.PenguinPetModClient"]
   },
   "depends": {
     "fabricloader": ">=0.18.0",
