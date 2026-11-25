@@ -13,8 +13,8 @@ Fabric / Minecraft Java **1.21.11**, Java 21. Works alongside Entity Texture Fea
 - Creative inventory -> Spawn Eggs tab -> **Penguin Egg**
 
 ## Status
-Entity + egg register and spawn. The penguin still uses the vanilla pig model as a placeholder;
-custom model, taming, inventory, etc. are not implemented yet.
+Custom penguin model (top hat + suitcase, waddle animation) and egg texture. Wanders, looks at players, flees danger.
+Taming, inventory GUI, babies and natural spawning are not implemented yet.
 
 ## v0.1.2 boot-crash fixes
 - Item.Settings now has its registry key (1.21.2+ requirement) -> fixes crash on startup.
